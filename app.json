@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "WhatsApp AI Replier",
+    "slug": "whatsapp-ai-replier",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#25D366"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.whatsappaireplier.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app uses location to keep WhatsApp Web active in the background.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses location to keep WhatsApp Web active in the background for continuous AI reply functionality.",
+        "UIBackgroundModes": ["location", "fetch", "processing"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#25D366"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ],
+      "package": "com.whatsappaireplier.app"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow WhatsApp AI Replier to use location to keep the app active in background for AI replying functionality."
+        }
+      ],
+      "expo-task-manager"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "whatsapp-ai-replier-v2"
+      }
+    }
+  }
+}
