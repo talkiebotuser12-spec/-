@@ -1,4 +1,3 @@
-# Codemagic CI/CD Configuration for automated iOS build
 workflows:
   ios-workflow:
     name: iOS Build
@@ -16,8 +15,7 @@ workflows:
           include: true
     scripts:
       - name: Install Project Dependencies
-        script: |
-          npm install
+        script: npm install
       - name: Run Build Script
         script: |
           chmod +x ./build-codemagic.sh
